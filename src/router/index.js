@@ -1,39 +1,25 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import UserProfile from '../components/UserProfile.vue';
-import TravelResources from '../components/TravelResources.vue';
-import LocalInsights from '../components/LocalInsights.vue';
-import MatchingAlgorithm from '../components/MatchingAlgorithm.vue';
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../components/Home.vue'
+import Login from '../components/Login.vue'
+import Register from '../components/Register.vue'
+import Profile from '../components/Profile.vue'
+import Itinerary from '../components/Itinerary.vue'
+import Recommendations from '../components/Recommendations.vue'
+import About from '../components/About.vue'
 
-Vue.use(Router);
+const routes = [
+  { path: '/', name: 'Home', component: Home },
+  { path: '/login', name: 'Login', component: Login },
+  { path: '/register', name: 'Register', component: Register },
+  { path: '/profile', name: 'Profile', component: Profile },
+  { path: '/itinerary', name: 'Itinerary', component: Itinerary },
+  { path: '/recommendations', name: 'Recommendations', component: Recommendations },
+  { path: '/about', name: 'About', component: About }
+]
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: UserProfile
-    },
-    {
-      path: '/user-profile',
-      name: 'UserProfile',
-      component: UserProfile
-    },
-    {
-      path: '/travel-resources',
-      name: 'TravelResources',
-      component: TravelResources
-    },
-    {
-      path: '/local-insights',
-      name: 'LocalInsights',
-      component: LocalInsights
-    },
-    {
-      path: '/matching-algorithm',
-      name: 'MatchingAlgorithm',
-      component: MatchingAlgorithm
-    }
-  ]
-});
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
 
+export default router
