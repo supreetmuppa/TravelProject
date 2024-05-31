@@ -1,25 +1,25 @@
-/* eslint-env node */
-require('@rushstack/eslint-patch/modern-module-resolution')
-
 module.exports = {
   root: true,
-  'extends': [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended',
-    '@vue/eslint-config-typescript',
-    '@vue/eslint-config-prettier/skip-formatting'
-  ],
-  overrides: [
-    {
-      files: [
-        'e2e/**/*.{test,spec}.{js,ts,jsx,tsx}'
-      ],
-      'extends': [
-        'plugin:playwright/recommended'
-      ]
-    }
-  ],
+  env: {
+    node: true,
+    es2021: true
+  },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: 12,
+    sourceType: 'module'
+  },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'plugin:prettier/recommended'
+  ],
+  plugins: ['@typescript-eslint', 'prettier'],
+  rules: {
+    'prettier/prettier': 'warn',
+    '@typescript-eslint/no-var-requires': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
+    'no-unused-vars': 'warn'
   }
 }
