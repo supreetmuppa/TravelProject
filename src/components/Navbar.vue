@@ -69,5 +69,17 @@
     background-color: white;
     color: #6347f9;
   }
+
+  .v-app-bar {
+  justify-content: center;
+  }
+
+  .v-app-bar .v-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   </style>
   
