@@ -26,24 +26,18 @@
       </div>
     </div>
     <div class="col-lg-6 col-md-12">
-      <h2>Travel Photos & Videos</h2>
+      <h2>Photos From Travelers</h2>
       <div class="row">
-        <div class="col-sm-6 mb-3">
-          <img src="https://source.unsplash.com/random/400x300?travel,people" class="img-thumbnail" alt="Travel Image" />
-        </div>
-        <div class="col-sm-6 mb-3">
-          <img src="https://source.unsplash.com/random/400x300?adventure,people" class="img-thumbnail" alt="Adventure Image" />
-        </div>
-        <div class="col-sm-6 mb-3">
-          <video width="100%" controls class="img-thumbnail">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div class="col-sm-6 mb-3">
-          <img src="https://source.unsplash.com/random/400x300?nature,people" class="img-thumbnail" alt="Nature Image" />
-        </div>
-      </div>
+  <div class="col-sm-6 mb-3">
+    <img src="https://source.unsplash.com/random/400x300?solo-travel" class="img-thumbnail" alt="Solo Travel Image 1" />
+  </div>
+  <div class="col-sm-6 mb-3">
+    <img src="https://source.unsplash.com/random/400x300?solo-adventure" class="img-thumbnail" alt="Solo Travel Image 2" />
+  </div>
+  <div class="col-sm-6 mb-3">
+    <img src="https://source.unsplash.com/random/400x300?solo-nature" class="img-thumbnail" alt="Solo Travel Image 3" />
+  </div>
+</div>
     </div>
   </div>
 </template>

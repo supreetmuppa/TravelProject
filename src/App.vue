@@ -1,37 +1,37 @@
 <template>
   <div id="app">
-    
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <router-link class="navbar-brand" to="/">WanderLink</router-link>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <router-link class="nav-link" to="/">Home</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/login">Login</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/register">Register</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/profile">Profile</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/itinerary">Itinerary</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/recommendations">Recommendations</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/about">About</router-link>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+      <div class="container-fluid">
+        <div class="navbar-brand">WanderLink</div>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <router-link class="nav-link" to="/" active-class="active">Home</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/login" active-class="active">Login</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/register" active-class="active">Register</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/profile" active-class="active">Profile</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/itinerary" active-class="active">Itinerary</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/recommendations" active-class="active">Recommendations</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/about" active-class="active">About</router-link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
     <div class="container mt-4">
       <router-view/>
     </div>
@@ -39,7 +39,6 @@
 </template>
 
 <script lang="ts">
-import Navbar from './components/Navbar.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -48,38 +47,46 @@ export default defineComponent({
 </script>
 
 <style>
+/* Apply a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f7f9fc;
+  background-color: #f0f2f5;
   color: #333;
   width: 100%;
-  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #app {
-  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Verdana', sans-serif;
-  color: #2d89ef;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
 }
 
 button {
-  background-color: #2d89ef;
+  background-color: #007bff;
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-  background-color: #1c5fa8;
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 input, textarea {
@@ -110,7 +117,110 @@ form {
   transform: scale(1.05);
 }
 
-/* Add media queries for larger screens */
+/* Navbar */
+.navbar {
+  background-color: #f3f2f8; 
+  color: #323232; 
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%; 
+}
+
+.navbar .container-fluid {
+  width: 100%;
+}
+
+.navbar .navbar-brand {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #323232; 
+  margin-right: 30px; /* Adjust this value for extra spacing */
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar .navbar-nav .nav-item {
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative; /* Add relative positioning */
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  color: black; /* Dark gray */
+  font-weight: bold;
+  padding-bottom: 10px; /* Add padding to create space for underline */
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Adjust this value to control the space above the item */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover:before,
+.navbar .navbar-nav .nav-item .nav-link.active:before {
+  opacity: 1;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover,
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: black; /* Change text color to white on hover and when active */
+}
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #006bff; /* or 0056b3 */
+  background-color: #f0f0f0; /* Slight color change to grey on hover */
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  color: black; 
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-decoration: none; 
+}
+
+.navbar-brand {
+  color: black;
+  margin-bottom: 20px;
+}
+
+
+.navbar-underline {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.container.mt-4 {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+  margin-top: -2px;
+}
+
+.container {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+}
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
@@ -130,14 +240,9 @@ form {
 }
 
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     padding: 0 2rem;
   }
 }
@@ -175,23 +280,7 @@ form {
   }
 }
 
-.navbar {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-}
-
-.navbar a {
-  color: #fff;
-  margin: 0 15px;
-  font-weight: bold;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
 </style>
-
 
 
 
