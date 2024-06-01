@@ -6,9 +6,11 @@ import Profile from '../components/Profile.vue'
 import Itinerary from '../components/Itinerary.vue'
 import Recommendations from '../components/Recommendations.vue'
 import About from '../components/About.vue'
+import LandingPage from '../components/LandingPage.vue'
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
+  { path: '/', name: 'LandingPage', component: LandingPage },
+  { path: '/home', name: 'Home', component: Home },
   { path: '/login', name: 'Login', component: Login },
   { path: '/register', name: 'Register', component: Register },
   { path: '/profile', name: 'Profile', component: Profile },
@@ -18,7 +20,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(import.meta.env.VUE_APP_BASE_URL),
   routes
 })
 

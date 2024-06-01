@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <router-link class="navbar-brand" to="/">WanderLink</router-link>
@@ -38,6 +39,7 @@
 </template>
 
 <script lang="ts">
+import Navbar from './components/Navbar.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -52,6 +54,8 @@ body {
   padding: 0;
   background-color: #f7f9fc;
   color: #333;
+  width: 100%;
+  text-align: center;
 }
 
 #app {
