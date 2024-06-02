@@ -6,9 +6,14 @@ function cosineSimilarity(vecA, vecB) {
 }
 
 function getUserVector(user) {
-  // Convert user interests into a binary vector
   const allInterests = ['hiking', 'swimming', 'reading', 'cooking', 'traveling']
-  return allInterests.map((interest) => (user.interests.includes(interest) ? 1 : 0))
+  const interestVector = allInterests.map((interest) => (user.interests.includes(interest) ? 1 : 0))
+
+  // Assuming we have a list of predefined locations, for example
+  const allLocations = ['Paris', 'New York', 'Bali', 'Tokyo', 'Sydney']
+  const locationVector = allLocations.map((location) => (user.location === location ? 1 : 0))
+
+  return interestVector.concat(locationVector)
 }
 
 async function matchUsers(users, currentUser) {

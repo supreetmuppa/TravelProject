@@ -22,9 +22,10 @@
           </ul>
           
           <h2>Our Team</h2>
-          <p>CEO: Angela Steele</p>
-          <p>CFO: Supreet Muppavarapu</p>
-          <p>CMO: Madeline Beach</p>
+          <p>Coleman Sweeney</p>
+          <p>Supreet Muppavarapu</p>
+          <p>Madeline Beach</p>
+          <p>Holger Geyer</p>
           
           <h2>Contact Us</h2>
           <p>For more information, visit our website or contact us at <a href="mailto:info@wanderlink.com">info@wanderlink.com</a>.</p>

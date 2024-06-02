@@ -1,37 +1,36 @@
 <template>
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container-fluid">
-        <div class="navbar-brand">WanderLink</div>
-        
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <router-link class="nav-link" to="/" active-class="active">Home</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/login" active-class="active">Login</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/register" active-class="active">Register</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/profile" active-class="active">Profile</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/itinerary" active-class="active">Itinerary</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/recommendations" active-class="active">Recommendations</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/about" active-class="active">About</router-link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="navbar-underline"></div>
+  <div class="container-fluid">
+    <router-link class="navbar-brand" to="/">WanderLink</router-link>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <router-link class="nav-link" to="/">Home</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/login">Login</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/register">Register</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/profile">Profile</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/itinerary">Itinerary</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/recommendations">Recommendations</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/about">About</router-link>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
     <div class="container mt-4">
       <router-view/>
     </div>
@@ -281,3 +280,11 @@ form {
 }
 
 </style>
+
+
+
+
+
+
+
+
