@@ -1,0 +1,5 @@
+use "node index.js" to start the server
+
+use "npm run start-dev" to start the server and client
+
+Another option to test: "npm run serve"
